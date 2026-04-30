@@ -8,21 +8,24 @@
 
 Total: <N>  |  PASS: <x>  |  FAIL: <y>  |  BLOCKED: <z>
 
-### Evidence pointers
+## Evidence pointers
 <!-- .pkl files, logs, video streams, ROS bags. -->
 
 ---
 
-🏁 **Recommendation**
+## 🏁 Recommendation
 
 Verdict: [ ] Ready to merge   [ ] Ready with follow-ups   [ ] Not ready
 
 Pass: <X> / <N>  |  Fail: <A> / <N>  |  Blocked: <B> / <N>
 
-Blocking issues:
+## Issues
+
+### Blocking issues
 - <none | specific>
 
-Non-blocking follow-ups:
+### Non-blocking follow-ups
 - <none | specific, with Jira link>
 
-Rationale: <2–3 lines on why this verdict>
+## Rationale
+<2–3 lines on why this verdict>
