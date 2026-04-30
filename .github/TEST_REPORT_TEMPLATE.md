@@ -1,4 +1,5 @@
 # Test Report
+<!-- Posted by the Tester after executing the Test Plan matrix. -->
 
 ## Summary
 
@@ -11,9 +12,8 @@ Total: <N>  |  PASS: <x>  |  FAIL: <y>  |  BLOCKED: <z>
 ## Evidence pointers
 <!-- .pkl files, logs, video streams, ROS bags. -->
 
----
-
-## 🏁 Recommendation
+## Recommendation
+<!-- Verdict + roll-up counts. -->
 
 Verdict: [ ] Ready to merge   [ ] Ready with follow-ups   [ ] Not ready
 
@@ -22,10 +22,10 @@ Pass: <X> / <N>  |  Fail: <A> / <N>  |  Blocked: <B> / <N>
 ## Issues
 
 ### Blocking issues
-- <none | specific>
+<!-- none | specific -->
 
 ### Non-blocking follow-ups
-- <none | specific, with Jira link>
+<!-- none | specific, with Jira link -->
 
 ## Rationale
-<2–3 lines on why this verdict>
+<!-- 2–3 lines on why this verdict. -->
