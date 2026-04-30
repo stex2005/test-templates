@@ -16,3 +16,5 @@ Sandbox for the Automation Team PR + Test Plan + Test Report templates.
    - CLI: `gh workflow run post-test-plan-template.yaml -f pr_number=<N> --repo stex2005/test-templates`
    - Confirm a comment appears on the PR.
 3. Copy `TEST_REPORT_TEMPLATE.md` into a new PR comment to scaffold the report.
+# sandbox change
+Trivial edit to open a smoke-test PR.
