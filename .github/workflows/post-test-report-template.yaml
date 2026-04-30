@@ -1,4 +1,4 @@
-name: Post Test Plan template
+name: Post Test Report template
 
 on:
   workflow_dispatch:
@@ -16,11 +16,11 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v4
-      - name: Post Test Plan template comment
+      - name: Post Test Report template comment
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ inputs.pr_number }}
           REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
-          gh pr comment "$PR_NUMBER" --repo "$REPO" --body-file .github/TEST_PLAN_TEMPLATE.md
+          gh pr comment "$PR_NUMBER" --repo "$REPO" --body-file .github/TEST_REPORT_TEMPLATE.md
