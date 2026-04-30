@@ -1,0 +1,61 @@
+name: Post Test Plan template
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: PR number to post the Test Plan template on
+        required: true
+        type: string
+
+jobs:
+  post-comment:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Post Test Plan template comment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ inputs.pr_number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          BODY_FILE="$(mktemp)"
+          cat > "$BODY_FILE" <<'EOF'
+          ## Test Plan
+          <!-- For feature PRs it is required. -->
+          ### Scope
+          <!-- One paragraph: what this test plan covers and what it explicitly does NOT cover. -->
+          ### Setup
+          <!-- Shared context that applies to all conditions: which robot, which pickle,
+               hardware specifics, dataset, relevant branch refs. -->
+          ### Summary
+          | ID | Condition | Setup | Pass Cond | Result | Notes |
+          |----|-----------|-------|-----------|--------|-------|
+          | 1  |           |       |           |        |       |
+
+          Total: <N>  |  PASS: <x>  |  FAIL: <y>  |  BLOCKED: <z>
+          ---
+          ### Condition 1 — <short statement>
+          **Setup**
+          - <row-specific preconditions, delta from the shared Setup above>
+
+          **Action**
+          - <single trigger that invokes the behavior>
+
+          **Pass Condition**
+          - <single observable criterion — one boolean>
+
+          **Result:** <PASS | FAIL | BLOCKED>
+
+          **Notes**
+          - <evidence: URL + timestamp; for non-PASS, what was observed and why>
+          ---
+          ### Condition 2 — <short statement>
+          ...
+          ---
+          ### Evidence pointers
+          <!-- Castr bucket/folder, CloudWatch log groups/streams, ROS bag locations. -->
+          EOF
+          gh pr comment "$PR_NUMBER" --repo "$REPO" --body-file "$BODY_FILE"
