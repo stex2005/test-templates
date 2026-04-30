@@ -10,9 +10,9 @@
 
 ## Summary
 
-| ID | Condition | Setup | Pass Cond | Result | Notes |
-|----|-----------|-------|-----------|--------|-------|
-| 1  |           |       |           |        |       |
+| ID | Condition | Setup | Pass Cond | Notes |
+|----|-----------|-------|-----------|-------|
+| 1  |           |       |           |       |
 
 ## Evidence pointers
 <!-- .pkl files, logs, video streams, ROS bags. -->
