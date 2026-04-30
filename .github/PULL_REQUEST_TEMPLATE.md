@@ -21,8 +21,6 @@
 |----|-----------|-------|-----------|--------|-------|
 | 1  |           |       |           |        |       |
 
-Total: <N>  |  PASS: <x>  |  FAIL: <y>  |  BLOCKED: <z>
-
 #### Evidence pointers
 <!-- .pkl files, logs, video streams, ROS bags. -->
 
